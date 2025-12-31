@@ -37,12 +37,11 @@ public class Main {
             }
             System.out.println();
         }
-        System.out.println();
 
         System.out.println("--------------------------");
 
         // Базовый пример, чтобы нарисовать, чтобы разобраться как работать с координатами во вложенном цикле
-        int imgSize = 20;
+        int imgSize = 5;
         for (int yyy = 0; yyy < imgSize; yyy++) {  // y - номер строки
             for (int xxx = 0; xxx < imgSize; xxx++) {   // x - номер столбца
                 // Например:
@@ -72,7 +71,7 @@ public class Main {
         int fieldSize1 = 10;
         for (int y1 = 0; y1 < fieldSize1; y1++) {  // y - номер строки
             for (int x1 = 0; x1 < fieldSize1; x1++) {   // x - номер столбца
-                if (x1 < 5) {
+                if (x1 < 5) {   // y1 < 5, чтобы разделить по строкам
                     System.out.print("x");
                 } else {
                     System.out.print(0);
@@ -220,6 +219,19 @@ public class Main {
         //*******000
         //********00
 
-        //Решение
+        int fieldSize7 = 10;
+        for (int y7 = 0; y7 < fieldSize7; y7++) {  // y - номер строки
+            for (int x7 = 0; x7 < fieldSize7; x7++) {   // x - номер столбца
+                if (x7 == y7) {
+                    for (int i = 0; i < 3; i++) {
+                        System.out.print("0");
+                    }
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
+
     }
 }
